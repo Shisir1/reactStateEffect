@@ -1,5 +1,6 @@
 {
   "name": "reactapptakeo",
+  "homepage": ".",
   "version": "1.0.0",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.0",
