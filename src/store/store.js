@@ -1,6 +1,21 @@
-import { createStore } from 'redux';
+import { createStore } from "redux";
 
-function counterReducer(state = { counter: 35 }, action) {
+const counterInitialState = { counter: 0, showCounter: true };
+
+function counterReducer(state = counterInitialState, action) {
+  console.log(action);
+  if (action.type === "increment") {
+    return { ...state, counter: state.counter + action.payload };
+  }
+
+  if (action.type === "decrement") {
+    return { ...state, counter: state.counter - action.key };
+  }
+
+  if (action.type === "toggle") {
+    return { ...state, showCounter: !state.showCounter };
+  }
+
   return state;
 }
 
